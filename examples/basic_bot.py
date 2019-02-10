@@ -48,7 +48,7 @@ async def joined(member : discord.Member):
     """Says when a member joined."""
     await bot.say('{0.name} joined in {0.joined_at}'.format(member))
 
-@bot.group(pass_context=True)
+@bot.group(pass_context=True
 async def cool(ctx):
     """Says if a user is cool.
 
@@ -61,5 +61,9 @@ async def cool(ctx):
 async def _bot():
     """Is the bot cool?"""
     await bot.say('Yes, the bot is cool.')
+           
+ @bot.command()
+           await bot.say('Pong!')
+      
 
 bot.run('token')
